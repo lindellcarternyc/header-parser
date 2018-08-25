@@ -25,8 +25,9 @@ app.get("/api/hello", function (req, res) {
 });
 
 
-
+// Configure port
+const PORT = process.env.PORT || 8869
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
+var listener = app.listen(PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
